@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Coloring Book</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="default">
+  <div id="toolbar">
+    <input type="file" id="upload" accept="image/*" title="Upload an image">
+    <button id="pencil" title="Draw with pencil">Pencil</button>
+    <button id="crayon" title="Draw with crayon">Crayon</button>
+    <button id="sketch" title="Draw with sketch">Sketch</button>
+    <button id="eraser" title="Erase">Eraser</button>
+    <input type="color" id="color-picker" title="Choose color">
+    <button id="bucket" title="Fill with color">Bucket</button>
+    <input type="range" id="brush-size" min="1" max="50" value="5" title="Adjust brush size">
+    <button id="shape-circle" title="Draw circle">Circle</button>
+    <button id="clear-canvas" title="Clear the canvas">Clear Canvas</button>
+    <button id="save" title="Save drawing">Save</button>
+    <button id="load" title="Load drawing">Load</button>
+    <button id="undo" title="Undo last action">Undo</button>
+    <button id="redo" title="Redo last action">Redo</button>
+    <button id="zoom-in" title="Zoom in">Zoom In</button>
+    <button id="zoom-out" title="Zoom out">Zoom Out</button>
+    <button id="tutorial" title="Show tutorial">Tutorial</button>
+    <select id="theme-selector" title="Select theme">
+      <option value="default">Default</option>
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+    </select>
+  </div>
+  <canvas id="canvas"></canvas>
+  <div id="tutorial-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tutorial</h2>
+      <p>Welcome to the Interactive Coloring Book!</p>
+      <p>Step 1: Upload an image.</p>
+      <p>Step 2: Choose a tool from the toolbar to start drawing.</p>
+      <p>Step 3: Use the color picker to select your colors.</p>
+      <p>Step 4: Save your drawing or clear the canvas to start over.</p>
+      <p>Enjoy your coloring!</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
